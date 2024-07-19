@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using shop_net.Models;
+using NotShop.Models;
 
-namespace shop_net.Controllers;
+namespace NotShop.Controllers;
 
 public class HomeController : Controller
 {
