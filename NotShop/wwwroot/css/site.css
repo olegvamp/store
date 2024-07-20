@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.main-title {
+  color: #97999c;
+  font-family: Helvetica Neue;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-decoration: none;
+  
+}
