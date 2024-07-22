@@ -1,4 +1,4 @@
-﻿namespace shop_net.Models;
+﻿namespace NotShop.Models;
 
 public class ErrorViewModel
 {
