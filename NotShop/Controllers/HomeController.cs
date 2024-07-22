@@ -1,16 +1,18 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using NotShop.Models;
+using NotShop.Models.Entity;
 
 namespace NotShop.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly MongoDbService dbService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(MongoDbService dbService)
     {
-        _logger = logger;
+        this.dbService = dbService;
     }
 
     public IActionResult Index()
@@ -18,9 +20,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Categories()
     {
-        return View();
+        return View(dbService.Database.GetCollection<Category>("Categories").Find(x => x.Name != "").ToList());
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
