@@ -19,16 +19,34 @@ html {
 
 body {
   margin-bottom: 60px;
+  padding: 1em;
 }
 
 .main-title {
-  color: #97999c;
+  color: #000000;
   font-family: Helvetica Neue;
   font-size: 50px;
   letter-spacing: 5px;
   text-decoration: none;
   
 }
+
+.category-title {
+  color: #97999c;
+  font-family: Helvetica Neue;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.subcategory-title {
+  color: #97999c;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
 
 .card{
   border: 0px;
