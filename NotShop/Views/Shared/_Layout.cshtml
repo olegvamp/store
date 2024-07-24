@@ -10,53 +10,88 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <svg class="card"/>
-            
-            <a asp-area="" class="main-title" asp-controller="Home" asp-action="Index">Не-магазин</a>
-            
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" class="category-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Категория 1</a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="subcategory-title">Подкатегория 1</a>
-                                <a href="#" class="subcategory-title">Подкатегория 2</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white justify-content-center border-bottom box-shadow mb-3">
+            <div class="container">
 
-            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne1">
-                        <h4 class="panel-title">
-                            <a role="button" class="category-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Категория 2</a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="subcategory-title">Подкатегория 1</a>
-                                <a href="#" class="subcategory-title">Подкатегория 2</a>
+                <div class="row">
+                    <a asp-area="" class="main-title" asp-controller="Home" asp-action="Index">НЕМ-АГА-ЗИН</a>
+                </div>
+            
+                <div class="row">
+                    <div class="col">
+                        <div class="panel-group" id="accordion0" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne0">
+                                    <h4 class="panel-title">
+                                        <a role="button" class="category-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Домское</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <a href="#" class="subcategory-title">Мебель</a>
+                                            <a href="#" class="subcategory-title">Посуда</a>
+                                            <a href="#" class="subcategory-title">Текстиль</a>
+                                            <a href="#" class="subcategory-title">Освещение</a>
+                                            <a href="#" class="subcategory-title">Декор</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" class="category-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Скуфское</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <a href="#" class="subcategory-title">Одежда</a>
+                                            <a href="#" class="subcategory-title">Обувь</a>
+                                            <a href="#" class="subcategory-title">Аксессуары</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne1">
+                                    <h4 class="panel-title">
+                                        <a role="button" class="category-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Милфское</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <a href="#" class="subcategory-title">Одежда</a>
+                                            <a href="#" class="subcategory-title">Обувь</a>
+                                            <a href="#" class="subcategory-title">Аксессуары</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+
 
     <footer class="border-top footer text-muted">
         <div class="container">

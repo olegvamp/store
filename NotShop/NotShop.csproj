@@ -16,4 +16,8 @@
   <ItemGroup>
     <Folder Include="wwwroot\icons\" />
   </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\HelveticaNeueCyr-UltraLight.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
+  </ItemGroup>
 </Project>

@@ -22,27 +22,39 @@ body {
   padding: 1em;
 }
 
+@font-face {
+  font-family: Helvetica Neue UltraLight;
+  src: url("fonts/HelveticaNeueCyr-UltraLight.ttf");
+}
+
 .main-title {
   color: #000000;
-  font-family: Helvetica Neue;
-  font-size: 50px;
-  letter-spacing: 5px;
+  font-family: Helvetica Neue UltraLight;
+  font-size: 68px;
+  letter-spacing: 33px;
   text-decoration: none;
-  
+}
+
+.main-title-sign {
+  color: #000000;
+  font-family: Helvetica Neue UltraLight;
+  font-size: 32px;
+  letter-spacing: 33px;
+  text-decoration: none;
 }
 
 .category-title {
-  color: #97999c;
-  font-family: Helvetica Neue;
+  color: #333333;
+  font-family:  Helvetica Neue UltraLight;
   font-size: 25px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-decoration: none;
 }
 
 .subcategory-title {
-  color: #97999c;
-  font-family: Helvetica Neue;
-  font-size: 12px;
+  color: #222222;
+  font-family:  Helvetica Neue UltraLight;
+  font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
 }
