@@ -13,4 +13,3 @@ public class Category
     [BsonElement("name"), BsonRepresentation(BsonType.String)]
     public string Name { get; set; }
 }
-
