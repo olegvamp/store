@@ -37,12 +37,24 @@ body {
 
 .main-title-sign {
   color: #000000;
+  text-align:center;
   font-family: Helvetica Neue UltraLight;
-  font-size: 32px;
-  letter-spacing: 33px;
+  font-size: 30px;
+  letter-spacing: 8px;
   text-decoration: none;
+  display:block;
 }
 
+.helvetica-text
+{
+  color: #000000;
+  font-family: Helvetica Neue UltraLight;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align:center;
+  vertical-align: middle;
+}
 .category-title {
   color: #333333;
   font-family:  Helvetica Neue UltraLight;

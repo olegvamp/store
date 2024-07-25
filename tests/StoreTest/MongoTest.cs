@@ -21,7 +21,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "crockery")]
+    //[InlineData("home", "furniture")]
     public void TestAddCategory(string groupName, string сategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -38,7 +38,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "crockery", "Тарелки")]
+    //[InlineData("home", "furniture", "Стулья")]
     public void TestAddSubCategory(string groupName, string categoryName, string subCategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -61,7 +61,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "crockery", "Тарелки")]
+    //[InlineData("home", "furniture", "Стулья")]
     public void TestAddItems(string groupName, string categoryName, string subCategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -83,10 +83,10 @@ public class MongoTest
                     {
                         Group = group,
                         Category = category,
-                        Description = "Тарелка для еды",
+                        Description = "Деревянный стул",
                         Id = ObjectId.GenerateNewId().ToString(),
-                        Name = "Westman Plate",
-                        Price = 500,
+                        Name = "MUJI Round Chair",
+                        Price = 1000,
                         SubCategory = subcategory
                     };
                     database.GetCollection<Item>("Items").InsertOne(item);
@@ -96,7 +96,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("Westman Plate")]
+    //[InlineData("MUJI Round Chair")]
     public void TestAddImages(string itemName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -110,7 +110,7 @@ public class MongoTest
             Item = item,
             Id = ObjectId.GenerateNewId().ToString(),
             IsMain = true,
-            Url = "/pictures/crockery/westman-plate/top.jpg"
+            Url = "/pictures/furniture/Muji Round Chair/Front.jpg"
         });
         
         database.GetCollection<Image>("Images").InsertOne(new Image()
@@ -118,7 +118,7 @@ public class MongoTest
             Item = item,
             Id = ObjectId.GenerateNewId().ToString(),
             IsMain = false,
-            Url = "/pictures/crockery/westman-plate/bottom.jpg"
+            Url = "/pictures/furniture/Muji Round Chair/Back.jpg"
         });
     }
 }

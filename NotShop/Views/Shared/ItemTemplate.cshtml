@@ -1,8 +1,8 @@
 ﻿@model shop_net.ViewModels.ImagedItem
 
-<div class="col-lg-4">
-    <img src="@Model.Images.First().Url"/>
-    <h2>@Model.Name</h2>
-    <p>@Model.Description</p>
-    <p>Цена: @Model.Price.ToString("C")</p>
+<div>
+    <img src="@Model.Images.First().Url" style="display: block;text-align:center; width: 600px" />
+    <a class="main-title-sign" href="#">@Model.Name</a>
+    <p class="helvetica-text" style="margin:0px">@Model.Description</p>
+    <p class="helvetica-text" style="margin:0px">Цена: @Model.Price.ToString("C")</p>
 </div>
