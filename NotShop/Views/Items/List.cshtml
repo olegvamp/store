@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Item>
+﻿@model shop_net.ViewModels.ItemsViewModel
 
 @{
     ViewData["Title"] = "Не-магазин";
@@ -6,7 +6,7 @@
 
 <div class="text-center">
     @{
-        foreach (var item in Model)
+        foreach (var item in Model.Items)
         {
             @Html.Partial("ItemTemplate", item)
         }

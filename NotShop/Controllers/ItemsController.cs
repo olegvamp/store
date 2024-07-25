@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using NotShop.Models;
 using NotShop.Models.Entity;
+using shop_net.ViewModels;
 
 namespace NotShop.Controllers;
 
@@ -26,10 +27,12 @@ public class ItemsController : Controller
         }
         else
         {
-            items = dbService.Database.GetCollection<Item>("Items").Find(x => x.Category.Name == category).ToList();
+            items = dbService.Database.GetCollection<Item>("Items").Find(x => x.Group.Name == category).ToList();
         }
 
-        return View(items);
+        var images = dbService.Database.GetCollection<Image>("Images").Find(x => x.Url != "").ToList();
+        
+        return View(new ItemsViewModel(items, images));
     }
 }
 
