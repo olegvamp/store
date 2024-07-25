@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Item>
+
+@{
+    ViewData["Title"] = "Не-магазин";
+}
+
+<div class="text-center">
+    @{
+        foreach (var item in Model)
+        {
+            @Html.Partial("ItemTemplate", item)
+        }
+    }
+</div>

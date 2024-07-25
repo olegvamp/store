@@ -15,11 +15,12 @@ public class ItemsController : Controller
         this.dbService = dbService;
     }
 
+    [Route("Items/List")]
     [Route("Items/List/{category}")]
     public ViewResult List(string category)
     {
         IEnumerable<Item> items;
-        if(string.IsNullOrEmpty(category))
+        if (string.IsNullOrEmpty(category))
         {
             items = dbService.Database.GetCollection<Item>("Items").Find(x => x.Name != "").ToList();
         }
