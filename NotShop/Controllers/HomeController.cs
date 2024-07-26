@@ -22,7 +22,7 @@ public class HomeController : Controller
 
     public IActionResult Categories()
     {
-        return View(dbService.Database.GetCollection<Category>("Categories").Find(x => x.Name != "").ToList());
+        return View(dbService.Database.GetCollection<Group>("Categories").Find(x => x.Name != "").ToList());
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

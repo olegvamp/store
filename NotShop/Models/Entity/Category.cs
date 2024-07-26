@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotShop.Models;
@@ -12,5 +11,7 @@ public class Category
     
     [BsonElement("name"), BsonRepresentation(BsonType.String)]
     public string Name { get; set; }
+    
+    [BsonElement ("group")]
+    public Group Group { get; set; }
 }
-
