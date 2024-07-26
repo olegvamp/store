@@ -21,7 +21,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "furniture")]
+    //[InlineData("home", "light")]
     public void TestAddCategory(string groupName, string сategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -38,7 +38,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "furniture", "Стулья")]
+    //[InlineData("home", "light", "Светильники")]
     public void TestAddSubCategory(string groupName, string categoryName, string subCategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -61,7 +61,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("home", "furniture", "Стулья")]
+    //[InlineData("home", "light", "Светильники")]
     public void TestAddItems(string groupName, string categoryName, string subCategoryName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -83,10 +83,10 @@ public class MongoTest
                     {
                         Group = group,
                         Category = category,
-                        Description = "Деревянный стул",
+                        Description = "Кресло",
                         Id = ObjectId.GenerateNewId().ToString(),
-                        Name = "MUJI Round Chair",
-                        Price = 1000,
+                        Name = "Firebeam Lamp",
+                        Price = 3500,
                         SubCategory = subcategory
                     };
                     database.GetCollection<Item>("Items").InsertOne(item);
@@ -96,7 +96,7 @@ public class MongoTest
     }
     
     //[Theory]
-    //[InlineData("MUJI Round Chair")]
+    //[InlineData("Firebeam Lamp")]
     public void TestAddImages(string itemName)
     {
         var mongoUrl = MongoUrl.Create(dbUrl);
@@ -110,9 +110,10 @@ public class MongoTest
             Item = item,
             Id = ObjectId.GenerateNewId().ToString(),
             IsMain = true,
-            Url = "/pictures/furniture/Muji Round Chair/Front.jpg"
+            Url = "/pictures/light/firebeam lamp/front.jpg"
         });
         
+        /*
         database.GetCollection<Image>("Images").InsertOne(new Image()
         {
             Item = item,
@@ -120,5 +121,6 @@ public class MongoTest
             IsMain = false,
             Url = "/pictures/furniture/Muji Round Chair/Back.jpg"
         });
+        */
     }
 }
