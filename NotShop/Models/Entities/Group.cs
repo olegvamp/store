@@ -4,5 +4,5 @@ namespace NotShop.Models.Entities;
 
 public class Group : BaseItem
 {
-    
+    public IEnumerable<Subgroup> Subgroups { get; set; }
 }
