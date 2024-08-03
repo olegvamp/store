@@ -2,17 +2,21 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using NotShop.Models;
+using NotShop.Models.Entities;
 using NotShop.Models.Entity;
+using Group = NotShop.Models.Group;
 
 namespace NotShop.Controllers;
 
 public class HomeController : Controller
 {
     private readonly MongoDbService dbService;
-
-    public HomeController(MongoDbService dbService)
+    private readonly PgContext _pgContext;
+    
+    public HomeController(MongoDbService dbService, PgContext pgContext)
     {
         this.dbService = dbService;
+        _pgContext = pgContext;
     }
 
     public IActionResult Index()

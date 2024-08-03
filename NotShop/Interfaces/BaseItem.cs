@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace shop_net.Interfaces;
 
 public abstract class BaseItem : IItem
@@ -5,7 +7,8 @@ public abstract class BaseItem : IItem
     public Guid Id { get; set; }
     public string Url { get; set; }
     public string Name { get; set; }
-    public IItem? Parent { get; set; }
+    [NotMapped]
+    public virtual IItem? Parent { get; }
 
     /// <summary>
     /// Получение полного URL-адреса

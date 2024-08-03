@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.EntityFrameworkCore;
+using NotShop.Models.Entities;
 using NotShop.Models.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<MongoDbService>();
+
+builder.Services.AddDbContext<PgContext>(
+    opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("PgDbConnection")));
 
 var app = builder.Build();
 
@@ -21,7 +25,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapControllerRoute(
